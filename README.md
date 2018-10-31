@@ -24,3 +24,5 @@ npm run test
 ```
 npm run lint
 ```
+
+show by vue-cli3-vueadmin
