@@ -4,7 +4,7 @@
         <sliderbar></sliderbar>
     </div>
     <div class="content">
-
+        <a href="#/home">this a link!</a>
     </div>
 </div>
 </template>

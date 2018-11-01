@@ -1,18 +1,19 @@
 <template>
 <el-menu
-default-active="2"
+:default-active="active"
 class="el-menu-vertical-demo"
 @open="handleOpen"
 @close="handleClose"
 background-color="#545c64"
 text-color="#fff"
-active-text-color="#ffd04b">
-    <el-submenu index="1">
+active-text-color="#ffd04b"
+:router="isroute">
+    <el-submenu index="/home">
         <template slot="title">
             <i class="el-icon-location"></i>
             <span>导航一</span>
         </template>
-        <el-menu-item index="1-1">选项1</el-menu-item>
+        <el-menu-item index="/doc/index">选项1</el-menu-item>
         <el-menu-item index="1-2">选项2</el-menu-item>
         <el-menu-item index="1-3">选项3</el-menu-item>
         <el-submenu index="1-4">
@@ -39,7 +40,12 @@ active-text-color="#ffd04b">
 export default {
     data () {
         return {
-
+            isroute: true
+        }
+    },
+    computed: {
+        active: function () {
+            return this.$route.path;
         }
     },
     methods: {
