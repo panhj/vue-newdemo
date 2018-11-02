@@ -7,7 +7,7 @@
     active-text-color="#ffd04b"
     :router="isroute">
         <el-menu-item index="/home">处理中心</el-menu-item>
-        <el-menu-item index="/doc/index">消息中心</el-menu-item>
+        <el-menu-item index="/doc/index/item1">消息中心</el-menu-item>
     </el-menu>
 </template>
 
@@ -22,7 +22,7 @@ export default {
     },
     computed: {
         activeIndex: function () {
-            return this.$route.path;
+            return this.$route.path.indexOf('doc') > -1 ? '/doc/index/item1' : '/home';
         }
     },
     methods: {

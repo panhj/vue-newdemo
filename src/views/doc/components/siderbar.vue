@@ -1,6 +1,6 @@
 <template>
 <el-menu
-:default-active="active"
+:default-active="$route.path"
 class="el-menu-vertical-demo"
 @open="handleOpen"
 @close="handleClose"
@@ -11,14 +11,14 @@ active-text-color="#ffd04b"
     <el-submenu index="/home">
         <template slot="title">
             <i class="el-icon-location"></i>
-            <span>导航一</span>
+            <span>基础服务</span>
         </template>
-        <el-menu-item index="/doc/index">选项1</el-menu-item>
-        <el-menu-item index="1-2">选项2</el-menu-item>
-        <el-menu-item index="1-3">选项3</el-menu-item>
-        <el-submenu index="1-4">
-            <template slot="title">选项4</template>
-            <el-menu-item index="1-4-1">选项1</el-menu-item>
+        <el-menu-item index="/doc/index/item1" class="active-bg">视频服务1</el-menu-item>
+        <el-menu-item index="/doc/index/item2">视频服务2</el-menu-item>
+        <el-menu-item index="/doc/index/item3">视频服务3</el-menu-item>
+        <el-submenu index="/doc/index/item4">
+            <template slot="title">视频服务4</template>
+            <el-menu-item index="/doc/index/item4/item4-1">录像</el-menu-item>
         </el-submenu>
     </el-submenu>
     <el-menu-item index="2">
@@ -40,7 +40,8 @@ active-text-color="#ffd04b"
 export default {
     data () {
         return {
-            isroute: true
+            isroute: true,
+            mindex: []
         }
     },
     computed: {
@@ -58,3 +59,10 @@ export default {
     }
 }
 </script>
+
+<style>
+.active-bg {
+    background-color: #000 !important;
+}
+</style>
+
