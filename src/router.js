@@ -5,9 +5,10 @@ import login from './views/login/login'
 import Layout from './views/Layout/Layout'
 import doc from './views/doc/doc'
 import toArtical from './views/doc/toArtical'
-import artical from './views/doc/artical'
 
 import store from './store'
+
+const loadArtical = () => import('@/views/doc/artical');
 
 Vue.use(VueRouter)
 
@@ -21,31 +22,32 @@ for (let value of routeList) {
     };
     if (value.children) {
         firstObj.children = [];
+        firstObj.redirect = '/doc/' + value.children[0].path;
         for (let child of value.children) {
             let secondObj = {
                 path: '/doc/' + child.path,
                 meta: { title: child.name }
             }
             if (child.children) {
+                secondObj.redirect = '/doc/' + child.children[0].path;
                 secondObj.component = toArtical;
                 secondObj.children = [];
                 for (let secondChild of child.children) {
                     secondObj.children.push({
                         path: '/doc/' + secondChild.path,
                         meta: { title: secondChild.name },
-                        component: artical
+                        component: loadArtical
                     })
                 }
             } else {
-                secondObj.component = artical
+                secondObj.component = loadArtical
             }
             firstObj.children.push(secondObj);
         }
     }
     docRoutes.push(firstObj);
 }
-console.log(docRoutes)
-
+console.log(docRoutes);
 export default new VueRouter({
     scrollBehavior: () => ({ y: 0 }),
     routes: [
@@ -67,6 +69,7 @@ export default new VueRouter({
             path: '/doc',
             meta: { 'title': '产品服务' },
             component: Layout,
+            redirect: '/doc/' + routeList[0].path,
             // children: [
             //     {
             //         path: 'index',

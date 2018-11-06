@@ -1,18 +1,19 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+const Mock = require('mockjs');
+const base = 'http://localhost:8088'
 
-import login from './login'
+// Mock.mock('http://localhost:8088/api/getDocRoutes', 'get', getTest())
 
-Vue.use(Vuex)
-const store = new Vuex.Store({
-    state: {
+function getTest() {
+    console.warn("ssssssssssssssss");
+    return {
         routeList: [
             {
-                path: 'index',
+                path: 'index',        // 一级  前面不要加'/'或者'#'
                 name: '基础服务',
+                icon: 'primary',         //  图标类名，暂时不做不用写这个字段了
                 children: [
                     {
-                        path: 'index/html1',
+                        path: 'index/html文档1',     // 二级菜单 - 支持中文
                         name: '基础api1'
                     },
                     {
@@ -30,11 +31,11 @@ const store = new Vuex.Store({
                         name: '服务系统'
                     },
                     {
-                        path: 'business/develop',
+                        path: 'business/develop', 
                         name: '开发指南',
                         children: [
                             {
-                                path: 'business/develop/html1',
+                                path: 'business/develop/api文档',   // 三级 - 支持中文
                                 name: '开发API'
                             }
                         ]
@@ -72,10 +73,5 @@ const store = new Vuex.Store({
                 ]
             }
         ]
-    },
-    modules: {
-        login,
     }
-})
-
-export default store
+}

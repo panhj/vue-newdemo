@@ -1,9 +1,6 @@
 <template>
-<el-breadcrumb separator="/">
-    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-    <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
-    <el-breadcrumb-item to="/doc/index">活动列表</el-breadcrumb-item>
-    <el-breadcrumb-item>活动详情{{xroute}}</el-breadcrumb-item>
+<el-breadcrumb separator=">">
+    <el-breadcrumb-item v-for="item in linkList" :key="item.path" :to="item.path">{{ item.name }}</el-breadcrumb-item>
 </el-breadcrumb>
 </template>
 
@@ -16,9 +13,15 @@ export default {
         }
     },
     computed: {
-        xroute: function() {
-            console.log(this.$route)
-            return this.$route.path
+        linkList: function() {
+           let arr = [];
+           for (let item of this.$route.matched) {
+               arr.push({
+                   name: item.meta.title || '未知',
+                   path: item.path
+               })
+           }
+        return arr;
         }
     },
     methods: {

@@ -16,13 +16,12 @@ export default {
     name: "navbar",
     data () {
         return {
-            // activeIndex: '/home'
             isroute: true
         }
     },
     computed: {
         activeIndex: function () {
-            return this.$route.path.indexOf('doc') > -1 ? '/doc/index/item1' : '/home';
+            return this.$route.path.indexOf('doc') > -1 ? '/doc/index/html1' : '/home';
         }
     },
     methods: {
