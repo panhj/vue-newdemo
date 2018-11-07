@@ -1,10 +1,9 @@
 const Mock = require('mockjs');
 const base = 'http://localhost:8088'
 
-// Mock.mock('http://localhost:8088/api/getDocRoutes', 'get', getTest())
+Mock.mock(/doc\/toc/, 'get', getTest())
 
 function getTest() {
-    console.warn("ssssssssssssssss");
     return {
         routeList: [
             {

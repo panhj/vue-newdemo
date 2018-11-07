@@ -21,7 +21,7 @@ export default {
     mounted () {
         // should place login
         let params = {
-            url: 'http://10.35.83.214:8080/openeco/doc/toc',
+            url: '/api/openeco/doc/toc',
         }
         // this.getDocRoutes(params).then(data => {
         //     console.log(data);
@@ -31,6 +31,26 @@ export default {
         this.$store.dispatch('getDocRoutes', params).then(() => {
             console.log("this is then")
         });
+        this.$router.addRoutes([
+            {
+                path: '/doc/xxx',        // 一级  前面不要加'/'或者'#'
+                name: '基础服务',
+                icon: 'primary',         //  图标类名，暂时不做不用写这个字段了
+                component: navbar,
+                children: [
+                    {
+                        path: '/xxx/xxxq',     // 二级菜单 - 支持中文
+                        name: '基础api1',
+                        component: navbar,
+                    },
+                    {
+                        path: '/index/html2',
+                        name: '基础api2',
+                        component: navbar,
+                    },
+                ]
+            }])
+        console.log(this.$router)
     },
     methods: {
         ...mapActions({

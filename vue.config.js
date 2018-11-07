@@ -5,12 +5,12 @@ module.exports = {
     baseUrl: '/',
     devServer: {
         proxy: {
-            '/openeco': {
+            '/api': {
                 target: 'http://10.35.83.214:8080',
                 changeOrigin: true,
                 ws: true,
                 pathRewrite: {
-                  '^/openeco': ''
+                  '^/api': '/'
                 }
             }
         }

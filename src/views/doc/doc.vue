@@ -6,7 +6,6 @@
     <div class="content-container">
         <div class="content-page">
             <breadcrumb class="breadcrumb"></breadcrumb>
-            <a>this is doc link</a>
             <router-view></router-view>
         </div>
     </div>

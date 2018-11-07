@@ -47,7 +47,6 @@ for (let value of routeList) {
     }
     docRoutes.push(firstObj);
 }
-console.log(docRoutes);
 export default new VueRouter({
     scrollBehavior: () => ({ y: 0 }),
     routes: [

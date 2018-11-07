@@ -1,6 +1,8 @@
 <template>
 <el-breadcrumb separator=">">
-    <el-breadcrumb-item v-for="item in linkList" :key="item.path" :to="item.path">{{ item.name }}</el-breadcrumb-item>
+    <!-- <transition-group name="breadcrumb"> -->
+        <el-breadcrumb-item v-for="item in linkList" :key="item.path" :to="item.path">{{ item.name }}</el-breadcrumb-item>
+    <!-- </transition-group> -->
 </el-breadcrumb>
 </template>
 
@@ -21,7 +23,7 @@ export default {
                    path: item.path
                })
            }
-        return arr;
+           return arr;
         }
     },
     methods: {
@@ -29,3 +31,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+/*fade*/
+
+
+</style>
