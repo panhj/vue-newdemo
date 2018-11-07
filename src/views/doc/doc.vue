@@ -15,13 +15,11 @@
 <script>
 import sliderbar from './components/siderbar'
 import breadcrumb from './components/breadcrumb'
-import artical from './artical'
 
 export default {
     components: {
         sliderbar,
-        breadcrumb,
-        artical
+        breadcrumb
     },
     data () {
         return {

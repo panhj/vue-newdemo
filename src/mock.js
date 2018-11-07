@@ -1,7 +1,7 @@
 const Mock = require('mockjs');
-const base = 'http://localhost:8088'
 
 Mock.mock(/doc\/toc/, 'get', getTest())
+Mock.mock(/login/, 'post', {'username': 'xxx'})
 
 function getTest() {
     return {
