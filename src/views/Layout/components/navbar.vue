@@ -7,11 +7,12 @@
     active-text-color="#ffd04b"
     :router="isroute">
         <el-menu-item index="/home">处理中心</el-menu-item>
-        <el-menu-item index="/doc/index/html1">消息中心</el-menu-item>
+        <el-menu-item index="/doc">消息中心</el-menu-item>
     </el-menu>
 </template>
 
 <script>
+import { mapState } from 'Vuex'
 export default {
     name: "navbar",
     data () {
@@ -22,7 +23,7 @@ export default {
     computed: {
         activeIndex: function () {
             return this.$route.path.indexOf('doc') > -1 ? '/doc/index/html1' : '/home';
-        }
+        },
     },
     methods: {
         handleSelect(key, keyPath) {

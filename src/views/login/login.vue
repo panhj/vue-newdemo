@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'Vuex'
 export default {
     name: 'login',
     data () {
@@ -40,18 +41,33 @@ export default {
         }
     },
     methods: {
-        submitForm(formName) {
+        ...mapActions({
+            login: 'login/login'
+        }),
+        submitForm (formName) {
+            let _this = this;
             this.$refs[formName].validate((valid) => {
                 if(valid) {
-                    alert('success!')
+                    _this.toLogin();
                 } else {
                     //console.log("invalid!")
                     return false;
                 }
             })
         },
-        resetForm(formName) {
+        resetForm (formName) {
             this.$refs[formName].resetFields()
+        },
+        toLogin () {
+            let params = {
+                url: '/api/login',
+                data: this.loginForm
+            }
+            this.$store.dispatch('login', params).then(() => {
+                this.$router.push('/home');
+            }).catch(e => {
+
+            })
         }
     }
 }
