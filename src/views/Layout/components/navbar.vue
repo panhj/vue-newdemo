@@ -6,8 +6,9 @@
     text-color="#fff"
     active-text-color="#ffd04b"
     :router="isroute">
-        <el-menu-item index="/home">处理中心</el-menu-item>
-        <el-menu-item index="/doc">消息中心</el-menu-item>
+        <el-menu-item index="/home">首页</el-menu-item>
+        <el-menu-item index="/doc">产品服务</el-menu-item>
+        <el-menu-item index="/support">服务支持</el-menu-item>
     </el-menu>
 </template>
 
@@ -21,9 +22,18 @@ export default {
         }
     },
     computed: {
+        ...mapState({
+            configRoutes: state => state.configRoutes.configRoutes
+        }),
         activeIndex: function () {
-            return this.$route.path.indexOf('doc') > -1 ? '/doc/index/html1' : '/home';
+            let path = this.$route.path;
+            if (path.indexOf('doc') > -1) return '/doc'
+            if (path.indexOf('support') > -1) return '/support'
+            return '/home';
         },
+    },
+    mounted () {
+        
     },
     methods: {
         handleSelect(key, keyPath) {

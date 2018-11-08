@@ -23,6 +23,35 @@ export default new VueRouter({
                 }
             ]
         },
+        {
+            path: '/support',
+            name: 'suppport',
+            meta: {'title': '服务支持'},
+            redirect: '/support/service/account',
+            component: Layout,
+            children: [
+                {
+                    path: '/support/service',
+                    name: 'service',
+                    meta: {'title': '服务支持'},
+                    component: () => import('@/views/support/support'),
+                    children: [
+                        {
+                            path: '/support/service/account',
+                            name: 'account',
+                            meta: {'title': '账号申请'},
+                            component: () => import('@/views/support/pages/account')
+                        },
+                        {
+                            path: '/support/service/feedback',
+                            name: 'feedback',
+                            meta: {'title': '问题反馈'},
+                            component: () => import('@/views/support/pages/feedback')
+                        }
+                    ]
+                }
+            ]
+        }
         // {
         //     path: '/doc',
         //     meta: { 'title': '产品服务' },

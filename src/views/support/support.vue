@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <div class="sliderbar">
+    <div class="sidebar">
         <sidebar></sidebar>
     </div>
     <div class="content-container">
@@ -14,7 +14,7 @@
 
 <script>
 import sidebar from './components/sidebar'
-import breadcrumb from './components/breadcrumb'
+import breadcrumb from '../doc/components/breadcrumb'
 
 export default {
     components: {
@@ -23,7 +23,7 @@ export default {
     },
     data () {
         return {
-            noChild: true,
+            
         }
     },
     watch: {
@@ -38,7 +38,6 @@ export default {
 
 <style lang="less" scoped>
 .container {
-    overflow: hidden;
     .content-container {
         width: 100%;
         padding-left: 250px;
@@ -50,10 +49,11 @@ export default {
         }
     }
 }
-.sliderbar {
+.sidebar {
+    position: absolute;
     float: left;
     width: 250px;
     text-align: left;
-    border-top: 2px solid #333;
+    border-top: 1px solid #333;
 }
 </style>

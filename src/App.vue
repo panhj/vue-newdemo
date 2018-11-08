@@ -10,8 +10,8 @@
 import login from "./views/login/login";
 import Layout from "./views/Layout/Layout";
 import doc from "./views/doc/doc";
-import toArtical from "./views/doc/toArtical";
-import artical from './views/doc/artical';
+import toArticle from "./views/doc/toArticle";
+import article from './views/doc/article';
 
 import { mapState, mapMutations, mapActions } from 'Vuex'
 
@@ -61,17 +61,17 @@ export default {
                         }
                         if (child.children) {
                             secondObj.redirect = '/doc/' + child.children[0].path;
-                            secondObj.component = toArtical;
+                            secondObj.component = toArticle;
                             secondObj.children = [];
                             for (let secondChild of child.children) {
                                 secondObj.children.push({
                                     path: '/doc/' + secondChild.path,
                                     meta: { title: secondChild.name },
-                                    component: artical
+                                    component: article
                                 })
                             }
                         } else {
-                            secondObj.component = artical
+                            secondObj.component = article
                         }
                         firstObj.children.push(secondObj);
                     }

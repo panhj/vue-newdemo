@@ -2,6 +2,7 @@ const Mock = require('mockjs');
 
 Mock.mock(/doc\/toc/, 'get', getTest())
 Mock.mock(/login/, 'post', {'username': 'xxx'})
+Mock.mock(/getArticle/, 'get', {"content": /[a-z][A-Z][0-9]/})
 
 function getTest() {
     return {
