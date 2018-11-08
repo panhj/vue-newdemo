@@ -11,6 +11,7 @@
 
 <script>
 import navbar from './components/navbar'
+import artical from '../doc/doc'
 import { mapState, mapMutations, mapActions } from 'Vuex'
 
 export default {
@@ -36,10 +37,10 @@ export default {
                 path: '/doc/xxx',        // 一级  前面不要加'/'或者'#'
                 name: '基础服务',
                 icon: 'primary',         //  图标类名，暂时不做不用写这个字段了
-                component: navbar,
+                component: artical,
                 children: [
                     {
-                        path: '/xxx/xxxq',     // 二级菜单 - 支持中文
+                        path: '/doc/xxx/q',     // 二级菜单 - 支持中文
                         name: '基础api1',
                         component: navbar,
                     },
