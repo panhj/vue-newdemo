@@ -17,9 +17,13 @@ function getTest() {
                         name: '基础api1'
                     },
                     {
-                        path: 'index/html2',
+                        path: 'index/html2xxxx',
                         name: '基础api2'
                     },
+                    {
+                        path: 'index/html2xxxxx',
+                        name: '基础api2xxx'
+                    }
                 ]
             },
             {
