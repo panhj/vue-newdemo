@@ -24,7 +24,7 @@ export default {
     },
     mounted () {
         let params = {
-            url: '/api/openeco/doc/toc',
+            url: '/api/openeco/Doc/toc',
         }
         this.$store.dispatch('getDocRoutes', params).then(configRoutes => {
             this.setDocRoutes(configRoutes);

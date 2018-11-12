@@ -60,8 +60,11 @@ export default {
         },
         toLogin () {
             let params = {
-                url: '/api/login',
-                data: this.loginForm
+                url: '/api/openeco/loginCheck',
+                data: {
+                    "userName": this.loginForm.name,
+                    "passWord": this.loginForm.password
+                }
             }
             this.$store.dispatch('login', params).then(() => {
                 this.$router.push('/home');

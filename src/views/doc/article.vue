@@ -4,8 +4,8 @@
         <p v-show="loading" class="loading"><i class="el-icon-loading"></i></p>
     </transition>
     <transition name="fade">
-        <div v-if="content">
-            <p>{{content}}</p>
+        <div v-if="content" v-html="content">
+            <!-- <p>{{content}}</p> -->
         </div>
     </transition>
 </div>
@@ -30,14 +30,15 @@ export default {
             this.content = '';
             this.$axios({
                 method: 'get',
-                url: '/api/getArticle/' + name,
+                // url: '/api/openeco/Doc/base/' + name,
+                url: '/api/openeco/Doc/base/clspre',
                 headers: {
                     'Content-Type': 'application/json'
                 }
             }).then(response => {
                 this.loading = false;
                 if(response.status != 200) throw new Error('ajax error')
-                this.content = response.data;
+                this.content = response.data.data;
             }).catch(e => {
                 this.loading = false;
                 console.error(e);
