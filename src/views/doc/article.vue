@@ -4,7 +4,7 @@
         <p v-show="loading" class="loading"><i class="el-icon-loading"></i></p>
     </transition>
     <transition name="fade">
-        <div v-if="content" v-html="content">
+        <div class="vhtml" v-if="content" v-html="content">
             <!-- <p>{{content}}</p> -->
         </div>
     </transition>
@@ -53,6 +53,30 @@ export default {
     }
 }
 </script>
+<style lang="less">
+
+.vhtml {
+    text-align: left;
+    ul {
+        padding: 0;
+        
+    }
+    &>ul>li {
+        list-style-type: none;
+    }
+    &>blockquote {
+        background-color: #eee;
+        margin: 0;
+    }
+    code {
+        border: 1px solid #ccc;
+        padding: 3px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+}
+</style>
+
 
 <style lang='less' scoped>
 .content {
