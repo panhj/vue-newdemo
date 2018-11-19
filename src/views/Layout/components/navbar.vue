@@ -2,9 +2,9 @@
     <el-menu :default-active="activeIndex" class="el-menu-demo" 
     mode="horizontal" 
     @select="handleSelect"  
-    background-color="#545c64"
-    text-color="#fff"
-    active-text-color="#ffd04b"
+    background-color="#2b333f"
+    text-color="#f3f3f4"
+    active-text-color="#67aaf5"
     :router="isroute">
         <el-menu-item index="/home">首页</el-menu-item>
         <el-menu-item index="/doc">产品服务</el-menu-item>
@@ -46,6 +46,13 @@ export default {
 <style lang="less" scoped>
     .el-menu.el-menu--horizontal {
         border: none;
+    }
+    .el-menu-demo {
+        
+    }
+    .el-menu-item {
+        font-size: 15px;
+        padding: 0 30px;
     }
 </style>
 

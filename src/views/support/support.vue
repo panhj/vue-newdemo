@@ -36,6 +36,13 @@ export default {
 }
 </script>
 
+<style scoped>
+.sidebar {
+    height: 100%;
+    min-height: calc(100vh - 60px);
+}
+</style>
+
 <style lang="less" scoped>
 .container {
     .content-container {
@@ -54,6 +61,7 @@ export default {
     float: left;
     width: 250px;
     text-align: left;
-    border-top: 1px solid #333;
+    background-color: #f5f6f7;
+    box-shadow: 0px 0px 40px 0px #0004;
 }
 </style>

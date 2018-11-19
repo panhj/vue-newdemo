@@ -2,11 +2,7 @@
 <el-menu
 :default-active="$route.path"
 class="el-menu-vertical-demo"
-@open="handleOpen"
-@close="handleClose"
-background-color="#545c64"
-text-color="#aaa"
-active-text-color="#ffd04b"
+background-color="#f5f6f7"
 :unique-opened="unique"
 :router="isroute">
     <!-- <el-submenu>
@@ -66,12 +62,7 @@ export default {
         }),
     },
     methods: {
-        handleOpen(key, keyPath) {
-            //console.log(key, keyPath);
-        },
-        handleClose(key, keyPath) {
-           // console.log(key, keyPath);
-        }
+
     },
     mounted () {
         
@@ -79,9 +70,8 @@ export default {
 }
 </script>
 <style lang='less'>
-.el-menu--inline div.el-submenu__title {
-    background-color: #42494f !important;
-   
+ .el-submenu__title:hover {
+    // background-color: #b6cae1 !important;
 }
 </style>
 
@@ -89,16 +79,14 @@ export default {
 .el-menu {
     border: none;
 }
-.el-menu>li>div>span {
-    
-    color: #fff !important;
+.el-submenu {
+    border-bottom: 1px dashed #ddd;
 }
 .el-menu-item {
-    background-color: #2f3438 !important;
-    /* color: #999 !important; */
+    background-color: #ececee !important;
 }
 .active-bg {
-    background-color: #2f3438 !important;
+    background-color: #c9def5 !important;
 }
 </style>
 

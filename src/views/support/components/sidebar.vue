@@ -2,9 +2,7 @@
 <el-menu
 :default-active="$route.path"
 class="el-menu-vertical-demo"
-background-color="#545c64"
-text-color="#aaa"
-active-text-color="#ffd04b"
+background-color="#f5f6f7"
 :unique-opened="unique"
 :router="isroute">
     <el-submenu index="support/service">
@@ -32,3 +30,15 @@ export default {
     },
 }
 </script>
+<style scoped>
+
+.el-submenu {
+    border-bottom: 1px dashed #ddd;
+}
+.el-menu-item {
+    background-color: #ececee !important;
+}
+.active-bg {
+    background-color: #c9def5 !important;
+}
+</style>

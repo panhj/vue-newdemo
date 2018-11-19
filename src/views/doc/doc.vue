@@ -36,9 +36,16 @@ export default {
 }
 </script>
 
+<style scoped>
+.sliderbar {
+    height: 100%;
+    min-height: calc(100vh - 60px);
+}
+</style>
+
+
 <style lang="less" scoped>
 .container {
-    overflow: hidden;
     .content-container {
         width: 100%;
         padding-left: 250px;
@@ -52,8 +59,10 @@ export default {
 }
 .sliderbar {
     float: left;
+    position: absolute;
     width: 250px;
+    background-color: #f5f6f7;
     text-align: left;
-    border-top: 2px solid #333;
+    box-shadow: 0px 0px 40px 0px #0004;
 }
 </style>

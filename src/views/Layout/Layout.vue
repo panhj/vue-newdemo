@@ -1,7 +1,13 @@
 <template>
 <div>
     <div class="nav-bar">
-        <navbar></navbar>
+        <div>
+            <p>
+                <i class="logo"></i>
+                <span>大华视频物联能力开放平台</span>
+            </p>
+            <navbar></navbar>
+        </div>
     </div>
     <transition name="fade">
         <router-view class="container"/>
@@ -36,8 +42,38 @@ export default {
     width: 100%;;
 }
 .nav-bar {
-    padding-left: 300px;
-    background-color: rgb(84, 92, 100);
+    width: 100%;
+    background-color: #2b333f;
+    &>div {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        padding-left: 330px;
+        &>p {
+            position: absolute;
+            left: 0;
+            margin: 0;
+            width:330px;
+            line-height: 60px;
+            height: 60px;
+            i {
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                background-color: #555;
+                vertical-align: middle;
+            }
+            span {
+                position: absolute;
+                left: 0;
+                font-size: 18px;
+                color: #fff;
+                padding-left: 70px;
+            }
+        }
+    }
 }
 .fade-enter-active, .fade-leave-active {
     transition: all .2s;
