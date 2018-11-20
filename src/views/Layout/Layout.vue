@@ -7,6 +7,7 @@
                 <span>大华视频物联能力开放平台</span>
             </p>
             <navbar></navbar>
+            <a href="http://10.35.112.169:8089/#/login" target="_blank">管理员登录</a>
         </div>
     </div>
     <transition name="fade">
@@ -62,21 +63,35 @@ export default {
                 left: 0;
                 width: 60px;
                 height: 60px;
-                background-color: #555;
                 vertical-align: middle;
+                background-image: url('../../assets/img/logo.png');
+                background-repeat: no-repeat;
+                background-position: 9px 9px;
+                background-size: 42px 42px;
             }
             span {
                 position: absolute;
                 left: 0;
                 font-size: 18px;
                 color: #fff;
-                padding-left: 70px;
+                padding-left: 60px;
             }
+        }
+        &>a {
+            position: absolute;
+            right: 0; top: 0;
+            color: #eee;
+            line-height: 60px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        &>a:hover {
+            color: #409EFF;
         }
     }
 }
 .fade-enter-active, .fade-leave-active {
-    transition: all .2s;
+    transition: all .3s;
 }
 .fade-enter, .fade-leave-to {
     transform: translateX(-10px);

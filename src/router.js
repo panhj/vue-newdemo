@@ -27,7 +27,7 @@ export default new VueRouter({
             path: '/support',
             name: 'suppport',
             meta: {'title': '服务支持'},
-            redirect: '/support/service/account',
+            redirect: '/support/service/feedback',
             component: Layout,
             children: [
                 {
@@ -36,12 +36,6 @@ export default new VueRouter({
                     meta: {'title': '服务支持'},
                     component: () => import('@/views/support/support'),
                     children: [
-                        {
-                            path: '/support/service/account',
-                            name: 'account',
-                            meta: {'title': '账号申请'},
-                            component: () => import('@/views/support/pages/account')
-                        },
                         {
                             path: '/support/service/feedback',
                             name: 'feedback',

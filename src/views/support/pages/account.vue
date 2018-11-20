@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>this is account!</h1>
+        <h2>账号申请--敬请期待!</h2>
     </div>
 </template>
 

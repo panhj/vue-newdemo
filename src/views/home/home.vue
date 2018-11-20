@@ -1,7 +1,16 @@
 <template>
 <div class="container">
     <div class="carousel">
-        <el-carousel trigger="click" height="30vw" :interval="timer">
+        <el-carousel trigger="click" height="28vw" :interval="timer">
+            <el-carousel-item class="img-bg banner">
+                <div class="banner-text">
+                    <div class="text">
+                        <h2>面向全生态</h2>
+                        <p>构建物联能力开放平台、赋能生态合作伙伴</p>
+                        <span>查看详情</span>
+                    </div>
+                </div>
+            </el-carousel-item>
             <el-carousel-item v-for="item in 4" :key="item">
                 <div class="banner-text">
                     <div class="text">
@@ -37,6 +46,10 @@ export default {
 .container {
     background: #fff;
     font-size: 30px;
+    .img-bg {
+        background-repeat: no-repeat;
+        background-size: 100vw 28vw;
+    }
     .banner-text {
         width: 1200px;
         height: 100%;
@@ -55,9 +68,18 @@ export default {
                 padding: 8px 50px;
                 border: 1px solid #fff;
                 cursor: pointer;
+                box-sizing: border-box;
+                transition: all 300ms;
+            }
+            span:hover {
+                background-color: #fff;
+                color: #475669;
             }
         }
     }
+}
+.banner {
+    background-image: url('../../assets/img/banner.png')
 }
 .el-carousel__container {
     min-width: 1000px;
