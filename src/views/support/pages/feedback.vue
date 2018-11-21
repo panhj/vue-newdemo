@@ -103,7 +103,7 @@ export default {
                 data: {
                     "name": obj.name,
                     "tel": obj.phone,
-                    "mail": obj.mail,
+                    "mail": obj.email,
                     "company": obj.company,
                     "category": obj.type,
                     "description": obj.desc
