@@ -106,4 +106,33 @@ div {
 .rfade-enter, .rfade-leave-to {
     opacity: 0;
 }
+
+::-webkit-scrollbar  
+{  
+    width: 5px; 
+    height: 5px;   
+    background-color: #fff;  
+}  
+
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);   */
+    border-radius: 10px;  
+    background-color: lightgray;  
+}  
+
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);   */
+    background-color: rgb(134, 134, 134);  
+}  
+/*定义最上方和最下方的按钮*/
+::-webkit-scrollbar-button{
+    height:0px;width:0px;
+    background-color: rgb(104, 104, 104);
+    border:1px solid rgb(104, 104, 104);
+}
 </style>

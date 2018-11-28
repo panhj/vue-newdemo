@@ -8,7 +8,7 @@
     :router="isroute">
         <el-menu-item index="/home">首页</el-menu-item>
         <el-menu-item index="/doc">产品服务</el-menu-item>
-        <el-menu-item index="/support">服务支持</el-menu-item>
+        <el-menu-item index="/service">服务支持</el-menu-item>
     </el-menu>
 </template>
 
@@ -28,7 +28,7 @@ export default {
         activeIndex: function () {
             let path = this.$route.path;
             if (path.indexOf('doc') > -1) return '/doc'
-            if (path.indexOf('support') > -1) return '/support'
+            if (path.indexOf('service') > -1) return '/service'
             return '/home';
         },
     },

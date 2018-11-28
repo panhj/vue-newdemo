@@ -35,7 +35,10 @@ background-color="#f5f6f7"
         </el-menu-item>
         <!-- 存在三级菜单 -->
         <el-submenu v-for="child in item.children" :key="child.path" v-if="child.children" :index="'/doc/' + child.path">
-            <template slot="title">{{ child.name }}</template>
+            <template slot="title">
+                <i class="el-icon-location-outline"></i>
+                <span>{{ child.name }}</span>
+            </template>
             <el-menu-item v-for="grandChild in child.children" :key="grandChild.path" :index="'/doc/' + grandChild.path"
             :class="{ 'active-bg': $route.path == '/doc/' + grandChild.path }">
                 {{ grandChild.name }}
@@ -70,17 +73,20 @@ export default {
 }
 </script>
 <style lang='less'>
- .el-submenu__title:hover {
-    // background-color: #b6cae1 !important;
+.el-menu--inline .el-submenu .el-submenu__title {
+    padding-left: 30px !important; 
 }
 </style>
 
-<style scoped>
+<style scoped lang="less">
 .el-menu {
     border: none;
 }
 .el-submenu {
     border-bottom: 1px dashed #ddd;
+    .el-submenu__title {
+        padding-left: 30px !important; 
+    }
 }
 .el-menu-item {
     background-color: #ececee !important;

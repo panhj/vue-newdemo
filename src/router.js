@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
     scrollBehavior: () => ({ y: 0 }),
-    base: '/vueProject',
+    base: '/support',
     routes: [
         {path: '/login', component: login},
        
@@ -25,23 +25,39 @@ export default new VueRouter({
             ]
         },
         {
-            path: '/support',
-            name: 'suppport',
-            meta: {'title': '服务支持'},
-            redirect: '/support/service/feedback',
+            path: '/',
             component: Layout,
             children: [
                 {
-                    path: '/support/service',
+                    path: '/service',
                     name: 'service',
                     meta: {'title': '服务支持'},
+                    redirect: '/service/feedback',
                     component: () => import('@/views/support/support'),
                     children: [
                         {
-                            path: '/support/service/feedback',
+                            path: '/service/feedback',
                             name: 'feedback',
                             meta: {'title': '问题反馈'},
                             component: () => import('@/views/support/pages/feedback')
+                        },
+                        {
+                            path: '/service/access',
+                            name: 'access',
+                            meta: {'title': '接入流程'},
+                            component: () => import('@/views/support/pages/access')
+                        },
+                        {
+                            path: '/service/notice',
+                            name: 'notice',
+                            meta: {'title': '更新公告'},
+                            component: () => import('@/views/support/pages/notice')
+                        },
+                        {
+                            path: '/service/demo',
+                            name: 'demo',
+                            meta: {'title': 'Demo下载'},
+                            component: () => import('@/views/support/pages/demo')
                         }
                     ]
                 }

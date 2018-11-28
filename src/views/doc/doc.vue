@@ -37,10 +37,16 @@ export default {
 </script>
 
 <style scoped>
-.sliderbar {
-    height: 100%;
-    min-height: calc(100vh - 60px);
+.sliderbar, .content-page{
+    height: calc(100vh - 60px);
+    overflow: auto;
 }
+.sliderbar::-webkit-scrollbar  
+{  
+    width: 0px; 
+    height: 0px;   
+    background-color: #fff;  
+}  
 </style>
 
 

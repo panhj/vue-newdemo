@@ -30,19 +30,29 @@ export default {
             this.content = '';
             this.$axios({
                 method: 'get',
-                url: '/Doc' + this.$route.path.replace('/doc', ''),
+                url: '/Doc/getDoc' + this.$route.path.replace('/doc', ''),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             }).then(response => {
                 this.loading = false;
                 if(response.status != 200) throw new Error('ajax error')
-                this.content = response.data.data;
+                if(response.data.data) {
+                    this.content = response.data.data;
+                } else {
+                    this.content = "<h1>该模块没有文档<h1>";
+                    this.$notify.error({
+                        title: '错误',
+                        message: '获取文档错误',
+                        offset: 60,
+                        duration: 2000
+                    });
+                }
             }).catch(e => {
                 this.loading = false;
                 console.error(e);
             })
-        }
+        },
     },
     mounted () {
          this.getArtical(this.$route.meta.title);
@@ -197,7 +207,6 @@ export default {
 <style lang='less' scoped>
 .content {
     width: 100%;
-    height: 100%;
 }
 .loading {
     margin: 0;

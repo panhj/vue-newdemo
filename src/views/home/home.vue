@@ -2,7 +2,7 @@
 <div class="container">
     <div class="carousel">
         <el-carousel trigger="click" height="28vw" :interval="timer">
-            <el-carousel-item class="img-bg banner">
+            <el-carousel-item class="img-bg banner1">
                 <div class="banner-text">
                     <div class="text">
                         <h2>面向全生态</h2>
@@ -11,15 +11,9 @@
                     </div>
                 </div>
             </el-carousel-item>
-            <el-carousel-item v-for="item in 4" :key="item">
-                <div class="banner-text">
-                    <div class="text">
-                        <h2>面向全生态</h2>
-                        <p>构建物联能力开放平台、赋能生态合作伙伴</p>
-                        <span>查看详情</span>
-                    </div>
-                </div>
-            </el-carousel-item>
+            <el-carousel-item class="img-bg banner2"></el-carousel-item>
+            <el-carousel-item class="img-bg banner3"></el-carousel-item>
+            <el-carousel-item class="img-bg banner4"></el-carousel-item>
         </el-carousel>
     </div>
     <section1></section1>
@@ -37,7 +31,7 @@ export default {
     },
     data () {
         return {
-            timer: 900000
+            timer: 5000
         }
     }
 }
@@ -78,8 +72,17 @@ export default {
         }
     }
 }
-.banner {
+.banner1 {
     background-image: url('../../assets/img/banner.png')
+}
+.banner2 {
+    background-image: url('../../assets/img/calc.png')
+}
+.banner3 {
+    background-image: url('../../assets/img/allai.png')
+}
+.banner4 {
+    background-image: url('../../assets/img/feel.png')
 }
 .el-carousel__container {
     min-width: 1000px;

@@ -112,6 +112,7 @@
             padding: 30px;
             border-bottom: 1px solid #a3a3a3;
         }
+        .card:hover {background-size:120%;}
         .card {
             float: left;
             position: relative;
@@ -119,7 +120,8 @@
             height: 296px;
             overflow: hidden;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: 100%;
+            transition: all 500ms ease-in;
             .card-icon i {
                 display: inline-block;
                 width: 80px;
@@ -127,7 +129,7 @@
                 margin-top: 80px;
                 margin-bottom: 20px;
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: 100%;
             }
             .card-icon span {
                 font-size: 24px;
@@ -162,9 +164,9 @@
                     }
                 }
             }
-            .card-hv:hover {
-                transform: translate3d(0, -50%, 0);
-            }
+            // .card-hv:hover {
+            //     transform: translate3d(0, -50%, 0);
+            // }
         }
         .footer {
             position: relative;

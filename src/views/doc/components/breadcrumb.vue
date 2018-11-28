@@ -18,8 +18,9 @@ export default {
         linkList: function() {
            let arr = [];
            for (let item of this.$route.matched) {
+               if(!item.meta.title) continue;
                arr.push({
-                   name: item.meta.title || '未知',
+                   name: item.meta.title,
                    path: item.path
                })
            }
