@@ -91,6 +91,6 @@
 }
 .png-video { background-image: url('../../../assets/img/视频基础.png') }
 .png-ai { background-image: url('../../../assets/img/AI智能服务.png') }
-.png-dt { background-image: url('../../../assets/img/大数据业务.png') }
+.png-dt { background-image: url('../../../assets/img/database.png') }
 </style>
 

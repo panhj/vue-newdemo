@@ -10,7 +10,7 @@
             </div>
             <div class="card-hv">
                 <div class="ms">
-                    <p>智慧警务智慧警务智慧警务 智慧警务智慧警务 智慧警务智慧警务</p>
+                    <p></p>
                     <span>了解详情</span>
                 </div>
             </div>
@@ -23,7 +23,7 @@
             </div>
             <div class="card-hv">
                 <div class="ms">
-                    <p>智慧警务智慧警务智慧警务 智慧警务智慧警务 智慧警务智慧警务</p>
+                    <p></p>
                     <span>了解详情</span>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="card-hv">
                 <div class="ms">
-                    <p>智慧警务智慧警务智慧警务 智慧警务智慧警务 智慧警务智慧警务</p>
+                    <p></p>
                     <span>了解详情</span>
                 </div>
             </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="card-hv">
                 <div class="ms">
-                    <p>智慧警务智慧警务智慧警务 智慧警务智慧警务 智慧警务智慧警务</p>
+                    <p></p>
                     <span>了解详情</span>
                 </div>
             </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="card-hv">
                 <div class="ms">
-                    <p>智慧警务智慧警务智慧警务 智慧警务智慧警务 智慧警务智慧警务</p>
+                    <p></p>
                     <span>了解详情</span>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             </div>
             <div class="card-hv">
                 <div class="ms">
-                    <p>智慧警务智慧警务智慧警务 智慧警务智慧警务 智慧警务智慧警务</p>
+                    <p></p>
                     <span>了解详情</span>
                 </div>
             </div>
@@ -202,11 +202,11 @@
 .png-logistics { background-image: url('../../../assets/img/物流.png') }
 .png-park { background-image: url('../../../assets/img/园区.png') }
 
-.pngbg-police { background-image: url('../../../assets/img/稽查.png') }
-.pngbg-traffic { background-image: url('../../../assets/img/智慧交管.png') }
-.pngbg-fire { background-image: url('../../../assets/img/智慧消防.png') }
-.pngbg-community { background-image: url('../../../assets/img/平安社区.png') }
-.pngbg-logistics { background-image: url('../../../assets/img/智慧物流.png') }
-.pngbg-park { background-image: url('../../../assets/img/智慧园区.png') }
+.pngbg-police { background-image: url('../../../assets/img/jicha.png') }
+.pngbg-traffic { background-image: url('../../../assets/img/zhihuijiaoguan.png') }
+.pngbg-fire { background-image: url('../../../assets/img/zhihuixiaofang.png') }
+.pngbg-community { background-image: url('../../../assets/img/pinganshequ.png') }
+.pngbg-logistics { background-image: url('../../../assets/img/zhihuiwuliu.png') }
+.pngbg-park { background-image: url('../../../assets/img/zhihuiyuanqu.png') }
 </style>
 

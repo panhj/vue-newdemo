@@ -11,6 +11,7 @@ import './styles/iconfont.css'
 require('./mock.js');
 
 Vue.prototype.$axios = axios;
+axios.defaults.baseURL = 'http://10.35.125.21:8999/openeco'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)

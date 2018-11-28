@@ -7,7 +7,7 @@
                 <span>大华视频物联能力开放平台</span>
             </p>
             <navbar></navbar>
-            <a href="http://10.35.112.169:8089/#/login" target="_blank">管理员登录</a>
+            <a href="http://10.35.125.21:8080/admin/#/login" target="_blank">登录</a>
         </div>
     </div>
     <transition name="fade">

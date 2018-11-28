@@ -30,7 +30,7 @@ export default {
             this.content = '';
             this.$axios({
                 method: 'get',
-                url: '/api/openeco/Doc' + this.$route.path.replace('/doc', ''),
+                url: '/Doc' + this.$route.path.replace('/doc', ''),
                 headers: {
                     'Content-Type': 'application/json'
                 }

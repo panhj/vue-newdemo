@@ -60,7 +60,7 @@ export default {
         },
         toLogin () {
             let params = {
-                url: '/api/openeco/loginCheck',
+                url: '/loginCheck',
                 data: {
                     "userName": this.loginForm.name,
                     "passWord": this.loginForm.password

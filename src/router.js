@@ -8,6 +8,7 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
     scrollBehavior: () => ({ y: 0 }),
+    base: '/vueProject',
     routes: [
         {path: '/login', component: login},
        
