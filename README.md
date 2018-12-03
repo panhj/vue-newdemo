@@ -26,3 +26,5 @@ npm run lint
 ```
 
 show by vue-cli3-vueadmin
+
+### this is api view pages width can config sidebar
