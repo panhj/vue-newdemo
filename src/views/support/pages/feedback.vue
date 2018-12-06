@@ -5,13 +5,13 @@
             <el-input v-model="form.name" placeholder="请输入姓名"></el-input>
         </el-form-item>
         <el-form-item label="电话：" prop="phone">
-            <el-input v-model="form.phone" placeholder="请输入姓名"></el-input>
+            <el-input v-model="form.phone" placeholder="请输入电话"></el-input>
         </el-form-item>
         <el-form-item label="邮箱：" prop="email">
-            <el-input v-model="form.email" placeholder="请输入姓名"></el-input>
+            <el-input v-model="form.email" placeholder="请输入邮箱"></el-input>
         </el-form-item>
         <el-form-item label="公司名称：" prop="company">
-            <el-input v-model="form.company" placeholder="请输入姓名"></el-input>
+            <el-input v-model="form.company" placeholder="请输入公司名称"></el-input>
         </el-form-item>
         <el-form-item label="问题分类：">
             <el-select v-model="form.type" placeholder="请选择问题类型">
@@ -65,16 +65,20 @@ export default {
                     {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'}
                 ],
                 phone: [
-                    {required: true, message: '不能为空', trigger: 'blur'},
+                    {required: false, message: '电话不能为空', trigger: 'blur'},
                     {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'}
                 ],
                 email: [
-                    {required: true, message: '不能为空', trigger: 'blur'},
+                    {required: true, message: '邮件不能为空', trigger: 'blur'},
                     {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'}
                 ],
                 company: [
-                    {required: true, message: '不能为空', trigger: 'blur'},
+                    {required: false, message: '不能为空', trigger: 'blur'},
                     {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'}
+                ],
+                desc: [
+                    {required: true, message: '描述不能为空', trigger: 'blur'},
+                    {min: 1, max: 200, message: '长度在1-200个字符', trigger: 'blur'}
                 ],
                 verify: [
                     {validator: validVerify, trigger: 'blur'}
