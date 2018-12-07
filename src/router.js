@@ -56,7 +56,7 @@ export default new VueRouter({
                         {
                             path: '/service/demo',
                             name: 'demo',
-                            meta: {'title': 'Demo下载'},
+                            meta: {'title': '附件下载'},
                             component: () => import('@/views/support/pages/demo')
                         }
                     ]

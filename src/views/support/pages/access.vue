@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h2>接入流程--敬请期待!</h2>
+        <img src="../../../assets/img/connect.png" alt="">
     </div>
 </template>
 

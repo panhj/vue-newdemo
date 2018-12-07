@@ -34,12 +34,7 @@ export default {
             currentPage: 1,
             total:50,
             list: [
-                {id:0,msg:'aaa',type:'123',time:'下载',url:"http://10.35.125.21:8999/openeco/demo"},
-                {id:1,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:2,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:3,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:4,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:5,msg:'aaa',type:'123',time:'2018-12-06'},
+                {id:0,msg:'demo下载',type:'123',time:'下载',url:"http://10.35.125.21:8999/openeco/demo"},
             ]
         }
     },

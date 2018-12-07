@@ -1,10 +1,10 @@
 <template>
     <div>
         <List title="问题列表" titleLeft="公告标题" titleRight="公告时间">
-            <listItem v-for="item in list"
-            :key = item.id
-            :id = item.id
-            :msg = item.msg
+            <listItem v-for="item in dataList"
+            :key = item.path
+            :id = item.path
+            :msg = item.title
             :time = item.time
             url="javascript:;"
             @toDetail="toDetail"
@@ -32,24 +32,44 @@ export default {
     data () {
         return {
             currentPage: 1,
-            total:50,
-            list: [
-                {id:0,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:1,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:2,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:3,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:4,msg:'aaa',type:'123',time:'2018-12-06'},
-                {id:5,msg:'aaa',type:'123',time:'2018-12-06'},
+            total:30,
+            dataList: [
             ]
         }
     },
     methods: {
         toDetail: function (id) {
-            
+            this.$axios({
+                method: 'get',
+                url: 'Update/content/' + id,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                alert('详情页还没做！' + response.data.data);
+            }).catch(e => {
+                console.error(e);
+            })
         },
-        getPage: function () {
-
+        getList () {
+            this.$axios({
+                method: 'get',
+                url: 'Update/toc',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                this.dataList = response.data.data.catelog;
+            }).catch(e => {
+                console.error(e);
+            })
+        },
+        getPage (p) {
+            alert('还没做，当前页：'+p)
         }
+    },
+    mounted () {
+        this.getList();
     }
 }
 </script>

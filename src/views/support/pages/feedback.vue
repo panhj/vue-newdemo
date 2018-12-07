@@ -100,7 +100,7 @@ export default {
         postForm (obj) {
             this.$axios({
                 method: 'post',
-                url: '/api/openeco/Inquiry',
+                url: 'Inquiry',
                 headers: {
                     'Content-Type': 'application/json'
                 },

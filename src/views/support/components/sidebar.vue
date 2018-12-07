@@ -19,7 +19,7 @@ background-color="#f5f6f7"
     </el-menu-item>
     <el-menu-item index="/service/demo" :class="{ 'active-bg': $route.path == '/service/demo'}">
         <i class="el-icon-menu"></i>
-        <span slot="title">Demo下载</span>
+        <span slot="title">附件下载</span>
     </el-menu-item>
 </el-menu>
 </template>
