@@ -2,21 +2,13 @@
     <div>
         <List title="问题列表" titleLeft="公告标题" titleRight="公告时间">
             <listItem v-for="item in list"
-            :key = item.id
+            :key = item.url
             :id = item.id
             :msg = item.msg
             :time = item.time
             :url = item.url
             @toDetail="toDetail"
             ></listItem>
-            <div class="pagination">
-                <el-pagination
-                background
-                layout="total, prev, pager, next"
-                :total="total"
-                @current-change="getPage">
-                </el-pagination>
-            </div>
         </List>
     </div>
 </template>
@@ -34,17 +26,36 @@ export default {
             currentPage: 1,
             total:50,
             list: [
-                {id:0,msg:'demo下载',type:'123',time:'下载',url:"http://10.35.125.21:8999/openeco/demo"},
+                {id:0,msg:'demo下载',time:'下载',url:"http://10.35.125.21:8999/openeco/demo"},
             ]
         }
     },
     methods: {
-        toDetail: function (id) {
-            
-        },
-        getPage: function () {
-
+        getDownload () {
+            this.$axios({
+                method: 'get',
+                url: 'demo/toc',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then(response => {
+                if(response.status != 200) throw new Error('ajax error')
+                let list = response.data.data.catelog;
+                for(let item of list) {
+                    this.list.push({
+                        id: item.path,
+                        msg: item.title,
+                        time: '下载',
+                        url: item.path
+                    })
+                }
+            }).catch(e => {
+                console.error(e);
+            })
         }
+    },
+    mounted () {
+        this.getDownload();
     }
 }
 </script>

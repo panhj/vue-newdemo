@@ -54,6 +54,12 @@ export default new VueRouter({
                             component: () => import('@/views/support/pages/notice')
                         },
                         {
+                            path: '/service/notice/detail',
+                            name: 'detail',
+                            meta: {'title': '更新公告 > 详情'},
+                            component: () => import('@/views/support/pages/noticeDetail')
+                        },
+                        {
                             path: '/service/demo',
                             name: 'demo',
                             meta: {'title': '附件下载'},

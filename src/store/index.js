@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import configRoutes from './configRoutes'
 import login from './login'
+import notice from './notice'
 
 Vue.use(Vuex)
 const store = new Vuex.Store({
@@ -11,7 +12,8 @@ const store = new Vuex.Store({
     },
     modules: {
         configRoutes,
-        login
+        login,
+        notice
     }
 })
 

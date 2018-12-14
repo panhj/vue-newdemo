@@ -9,14 +9,6 @@
             url="javascript:;"
             @toDetail="toDetail"
             ></listItem>
-            <div class="pagination">
-                <el-pagination
-                background
-                layout="total, prev, pager, next"
-                :total="total"
-                @current-change="getPage">
-                </el-pagination>
-            </div>
         </List>
     </div>
 </template>
@@ -24,6 +16,7 @@
 <script>
 import List from '../components/List.vue'
 import listItem from '../components/listItem.vue'
+import { mapState, mapMutations, mapActions } from 'Vuex'
 export default {
     components: {
         List,
@@ -32,24 +25,20 @@ export default {
     data () {
         return {
             currentPage: 1,
-            total:30,
+            total:10,
             dataList: [
             ]
         }
     },
     methods: {
+        ...mapMutations({
+            setId: 'notice/setId'
+        }),
         toDetail: function (id) {
-            this.$axios({
-                method: 'get',
-                url: 'Update/content/' + id,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then(response => {
-                alert('详情页还没做！' + response.data.data);
-            }).catch(e => {
-                console.error(e);
-            })
+            console.log(id);
+            // this.setId(id)
+            this.$root.$data.nId = id;
+            this.$router.push('/service/notice/detail');
         },
         getList () {
             this.$axios({
@@ -63,9 +52,6 @@ export default {
             }).catch(e => {
                 console.error(e);
             })
-        },
-        getPage (p) {
-            alert('还没做，当前页：'+p)
         }
     },
     mounted () {
