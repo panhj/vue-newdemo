@@ -26,7 +26,7 @@ export default {
             currentPage: 1,
             total:50,
             list: [
-                {id:0,msg:'demo下载',time:'下载',url:"http://10.35.125.21:8999/openeco/demo"},
+                // {id:0,msg:'demo下载',time:'下载',url:"http://10.35.125.21:8999/openeco/demo"},
             ]
         }
     },
