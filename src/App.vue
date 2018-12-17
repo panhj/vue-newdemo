@@ -86,19 +86,22 @@ export default {
 
 <style>
 #app {
-     font-family: "Avenir", Helvetica, Arial, sans-serif;
-     -webkit-font-smoothing: antialiased;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-     color: #2c3e50;
-     /* margin-top: 60px; */
+    color: #2c3e50;
+    /* margin-top: 60px; */
 }
 html,
 body,
 div {
-     margin: 0;
+    margin: 0;
     padding: 0;
-     box-sizing: border-box;
+    box-sizing: border-box;
+}
+html body {
+    padding: 0;
 }
 .rfade-enter-active, .rfade-leave-active {
     transition: all .3s;

@@ -7,7 +7,7 @@
             <div class="png-video"></div>
             <p>视频基础服务</p>
             <p>提供稳定的视频监控、录像点播服务</p>
-            <span>了解详情</span>
+            <span @click="toVideoDetail()">了解详情</span>
         </div>
         <div>
             <div class="png-ai"></div>
@@ -24,6 +24,21 @@
     </div>
 </div>
 </template>
+
+<script>
+export default {
+    data () {
+        return {
+
+        }
+    },
+    methods: {
+        toVideoDetail () {
+            this.$router.push('/doc/protocol/base')
+        }
+    }
+}
+</script>
 
 <style lang="less" scoped>
 .section1 {

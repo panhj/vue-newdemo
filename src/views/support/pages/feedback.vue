@@ -48,6 +48,22 @@ export default {
                 callback();
             }
         }
+        var validPhone = (rule, value, callback) => {
+            var phoneReg = /^1[34578]\d{9}$/;
+            if(phoneReg.test(value)) {
+                callback();
+            } else {
+                callback(new Error('手机格式有误'))
+            }
+        }
+        var validEmail = (rule, value, callback) => {
+            var phoneReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if(phoneReg.test(value)) {
+                callback();
+            } else {
+                callback(new Error('邮箱格式有误'))
+            }
+        }
         return {
             form: {
                 name: '',
@@ -66,11 +82,13 @@ export default {
                 ],
                 phone: [
                     {required: false, message: '电话不能为空', trigger: 'blur'},
-                    {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'}
+                    {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'},
+                    {validator: validPhone, trigger: 'blur'}
                 ],
                 email: [
                     {required: true, message: '邮件不能为空', trigger: 'blur'},
-                    {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'}
+                    {min: 1, max: 30, message: '长度在1-30个字符', trigger: 'blur'},
+                    {validator: validEmail, trigger: 'blur'}
                 ],
                 company: [
                     {required: false, message: '不能为空', trigger: 'blur'},
@@ -158,9 +176,9 @@ export default {
                 this.verify += txt;
                 ctx.font = this.randomNum(opt.height/2, opt.height) + 'px SimHei'; //随机生成字体大小
                 ctx.fillStyle = this.randomColor(50, 160); //随机生成字体颜色        
-                ctx.shadowOffsetX = this.randomNum(-3, 3);
-                ctx.shadowOffsetY = this.randomNum(-3, 3);
-                ctx.shadowBlur = this.randomNum(-3, 3);
+                ctx.shadowOffsetX = this.randomNum(-2, 2);
+                ctx.shadowOffsetY = this.randomNum(-2, 2);
+                ctx.shadowBlur = this.randomNum(-2, 2);
                 ctx.shadowColor = "rgba(0, 0, 0, 0.3)";
                 let x = opt.width / 5 * i;
                 let y = opt.height / 2;

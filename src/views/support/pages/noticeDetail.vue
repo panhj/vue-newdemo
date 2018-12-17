@@ -1,5 +1,5 @@
 <template>
-    <div v-html="contents"></div>
+    <div class="content" v-html="contents"></div>
 </template>
 
 <script>
@@ -29,3 +29,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.content {
+    text-align: left;
+}
+</style>
+

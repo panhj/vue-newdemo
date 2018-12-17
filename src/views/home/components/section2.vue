@@ -112,7 +112,7 @@
             padding: 30px;
             border-bottom: 1px solid #a3a3a3;
         }
-        .card:hover {background-size:120%;}
+        .card:hover {background-size:102%;}
         .card {
             float: left;
             position: relative;
@@ -121,7 +121,8 @@
             overflow: hidden;
             background-repeat: no-repeat;
             background-size: 100%;
-            transition: all 500ms ease-in;
+            transition: all 500ms ease;
+            cursor: pointer;
             .card-icon i {
                 display: inline-block;
                 width: 80px;
