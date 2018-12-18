@@ -48,7 +48,6 @@ export default {
                     }
                 }).then(response => {
                     if( response.status !== 200 ) throw new Error("ajax error!");
-                    console.log(response)
                     let routeList = response.data.data.catelog;
                     commit('setDocRoutes', routeList);
                     resolve(routeList);
