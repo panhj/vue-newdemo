@@ -33,7 +33,7 @@ show by vue-cli3-vueadmin
 ![image](https://github.com/panhj/vue-newdemo/raw/master/screenshot/home.png)
 
 
-![image](https://github.com/panhj/vue-newdemo/raw/master/screenshot/artical.png)
+![image](https://github.com/panhj/vue-newdemo/raw/master/screenshot/artical.PNG)
 
 
-![image](https://github.com/panhj/vue-newdemo/raw/master/screenshot/service.png)
+![image](https://github.com/panhj/vue-newdemo/raw/master/screenshot/service.PNG)
