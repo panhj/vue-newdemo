@@ -27,7 +27,7 @@ npm run lint
 
 show by vue-cli3-vueadmin
 
-### this is api view pages width can config sidebar
+### this is api view pages width configable sidebar
 
 
 ![image](https://github.com/panhj/vue-newdemo/raw/master/screenshot/home.png)
