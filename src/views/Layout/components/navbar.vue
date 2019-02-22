@@ -7,7 +7,7 @@
     active-text-color="#67aaf5"
     :router="isroute">
         <el-menu-item index="/home">首页</el-menu-item>
-        <el-menu-item index="/doc">产品服务</el-menu-item>
+        <el-menu-item index="/doc">协议文档</el-menu-item>
         <el-menu-item index="/service">服务支持</el-menu-item>
     </el-menu>
 </template>

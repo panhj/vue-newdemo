@@ -6,19 +6,19 @@
         <div>
             <div class="png-video"></div>
             <p>视频基础服务</p>
-            <p>提供稳定的视频监控、录像点播服务</p>
+            <p>提供稳定的设备管理、视频分发和存储等服务</p>
             <span @click="toVideoDetail()">了解详情</span>
         </div>
         <div>
             <div class="png-ai"></div>
             <p>AI智能服务</p>
-            <p>提供车辆、人像等业务系统的AI能力服务</p>
+            <p>提供车辆、人像等物体检测、识别和统计服务</p>
             <span>了解详情</span>
         </div>
         <div>
             <div class="png-dt"></div>
             <p>大数据服务</p>
-            <p>提供强大的视频数据能力、提供高并发查询等服务</p>
+            <p>提供海量数据的检索、分析等服务</p>
             <span>了解详情</span>
         </div>
     </div>

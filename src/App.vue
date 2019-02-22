@@ -29,7 +29,11 @@ export default {
         this.$store.dispatch('getDocRoutes', params).then(configRoutes => {
             this.setDocRoutes(configRoutes);
         }).catch((e) => {
-            
+            this.$notify.error({
+                title: '404错误',
+                message: "获取协议文档目录失败",
+                offset: 100
+            });
         });
     },
     methods: {
@@ -40,7 +44,7 @@ export default {
         setDocRoutes (configRoutes) {
             const docRouter = [{
                 path: '/doc',
-                meta: { 'title': '产品服务' },
+                meta: { 'title': '协议文档' },
                 component: Layout,
                 redirect: '/doc/' + configRoutes[0].path,
                 children: []

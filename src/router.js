@@ -38,13 +38,13 @@ export default new VueRouter({
                         {
                             path: '/service/feedback',
                             name: 'feedback',
-                            meta: {'title': '问题反馈'},
+                            meta: {'title': '合作申请'},
                             component: () => import('@/views/support/pages/feedback')
                         },
                         {
                             path: '/service/access',
                             name: 'access',
-                            meta: {'title': '接入流程'},
+                            meta: {'title': '对接流程'},
                             component: () => import('@/views/support/pages/access')
                         },
                         {

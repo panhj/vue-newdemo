@@ -3,7 +3,7 @@ module.exports = {
     //     devtool: 'source-map'
     // },
     baseUrl: './',
-    productionSourceMap: false,
+    // productionSourceMap: false,
     // devServer: {
     //     proxy: {
     //         '/api': {

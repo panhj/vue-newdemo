@@ -28,6 +28,45 @@
                 </div>
             </div>
         </div>
+        <div class="card pngbg-park">
+            <div class="card-icon">
+                <i class="icon png-park"></i>
+                <br/>
+                <span>智慧园区</span>
+            </div>
+            <div class="card-hv">
+                <div class="ms">
+                    <p></p>
+                    <span>了解详情</span>
+                </div>
+            </div>
+        </div>
+        <div class="card pngbg-money">
+            <div class="card-icon">
+                <i class="icon png-money"></i>
+                <br/>
+                <span>智慧金融</span>
+            </div>
+            <div class="card-hv">
+                <div class="ms">
+                    <p></p>
+                    <span>了解详情</span>
+                </div>
+            </div>
+        </div>
+        <div class="card pngbg-snow">
+            <div class="card-icon">
+                <i class="icon png-snow"></i>
+                <br/>
+                <span>雪亮工程</span>
+            </div>
+            <div class="card-hv">
+                <div class="ms">
+                    <p></p>
+                    <span>了解详情</span>
+                </div>
+            </div>
+        </div>
         <div class="card pngbg-fire">
             <div class="card-icon">
                 <i class="icon png-fire"></i>
@@ -41,11 +80,11 @@
                 </div>
             </div>
         </div>
-        <div class="card pngbg-community">
+        <div class="card pngbg-study">
             <div class="card-icon">
-                <i class="icon png-community"></i>
+                <i class="icon png-study"></i>
                 <br/>
-                <span>智慧社区</span>
+                <span>智慧教育</span>
             </div>
             <div class="card-hv">
                 <div class="ms">
@@ -54,24 +93,24 @@
                 </div>
             </div>
         </div>
-        <div class="card pngbg-logistics">
+        <div class="card pngbg-hospital">
             <div class="card-icon">
-                <i class="icon png-logistics"></i>
+                <i class="icon png-hospital"></i>
+                <br/>
+                <span>智慧医疗</span>
+            </div>
+            <div class="card-hv">
+                <div class="ms">
+                    <p></p>
+                    <span>了解详情</span>
+                </div>
+            </div>
+        </div>
+        <div class="card pngbg-express">
+            <div class="card-icon">
+                <i class="icon png-express"></i>
                 <br/>
                 <span>智慧物流</span>
-            </div>
-            <div class="card-hv">
-                <div class="ms">
-                    <p></p>
-                    <span>了解详情</span>
-                </div>
-            </div>
-        </div>
-        <div class="card pngbg-park">
-            <div class="card-icon">
-                <i class="icon png-park"></i>
-                <br/>
-                <span>智慧园区</span>
             </div>
             <div class="card-hv">
                 <div class="ms">
@@ -198,18 +237,24 @@
         }
     }
 }
-.png-police { background-image: url('../../../assets/img/警务.png') }
-.png-traffic { background-image: url('../../../assets/img/交通.png') }
-.png-fire { background-image: url('../../../assets/img/消防.png') }
-.png-community { background-image: url('../../../assets/img/社区.png') }
-.png-logistics { background-image: url('../../../assets/img/物流.png') }
-.png-park { background-image: url('../../../assets/img/园区.png') }
+.png-police { background-image: url('../../../assets/img/police.png') }
+.png-traffic { background-image: url('../../../assets/img/traffic.png') }
+.png-park { background-image: url('../../../assets/img/park.png') }
+.png-money { background-image: url('../../../assets/img/money.png') }
+.png-snow { background-image: url('../../../assets/img/snow.png') }
+.png-fire { background-image: url('../../../assets/img/fire.png') }
+.png-study { background-image: url('../../../assets/img/study.png') }
+.png-hospital { background-image: url('../../../assets/img/hospital.png') }
+.png-express { background-image: url('../../../assets/img/express.png') }
 
-.pngbg-police { background-image: url('../../../assets/img/jicha.png') }
-.pngbg-traffic { background-image: url('../../../assets/img/zhihuijiaoguan.png') }
-.pngbg-fire { background-image: url('../../../assets/img/zhihuixiaofang.png') }
-.pngbg-community { background-image: url('../../../assets/img/pinganshequ.png') }
-.pngbg-logistics { background-image: url('../../../assets/img/zhihuiwuliu.png') }
-.pngbg-park { background-image: url('../../../assets/img/zhihuiyuanqu.png') }
+.pngbg-police { background-image: url('../../../assets/img/policeBg.png') }
+.pngbg-traffic { background-image: url('../../../assets/img/trafficBg.png') }
+.pngbg-park { background-image: url('../../../assets/img/parkBg.png') }
+.pngbg-money { background-image: url('../../../assets/img/moneyBg.png') }
+.pngbg-snow { background-image: url('../../../assets/img/snowBg.png') }
+.pngbg-fire { background-image: url('../../../assets/img/fireBg.png') }
+.pngbg-study { background-image: url('../../../assets/img/studyBg.png') }
+.pngbg-hospital { background-image: url('../../../assets/img/hospitalBg.png') }
+.pngbg-express { background-image: url('../../../assets/img/expressBg.png') }
 </style>
 
